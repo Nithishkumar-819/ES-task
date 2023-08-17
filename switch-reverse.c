@@ -1,0 +1,17 @@
+#include <AT89S52.h>	
+#define ULED P2_0
+#define SWITCH P3_7
+
+void main()
+{
+SWITCH=1;
+ULED=1;
+while(1)
+{
+if(SWITCH==0){
+ULED=0;
+}
+else{
+ULED=1;
+}
+}
