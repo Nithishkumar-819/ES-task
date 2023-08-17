@@ -1,0 +1,28 @@
+#include <AT89S52.h>	
+#define RLED P2_1
+#define GLED P2_2
+
+#define SWITCH P2_7
+
+void main()
+{
+ SWITCH=1;
+ RLED=0;
+ GLED=0;
+ 
+ while(1)
+ {
+  if(SWITCH==0)
+  {
+   RLED=1;
+   GLED=0;
+   
+  }
+  else
+  {
+  RLED=0;
+   GLED=1;
+  }
+ }
+}
+
